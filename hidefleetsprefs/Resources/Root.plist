@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Tweak Settings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.hidefleetsprefs</string>
+			<key>key</key>
+			<string>HideFleets</string>
+			<key>label</key>
+			<string>Hide Fleets</string>
+			<key>PostNotification</key>
+			<string>com.hidefleetsprefs/settingschanged</string>
+		</dict>
+		<dict>
+		<key>cell</key>
+		<string>PSButtonCell</string>
+		<key>label</key>
+		<string>Apply</string>
+		<key>action</key>
+		<string>apply</string>
+</dict>
+<dict>
+	<key>cell</key>
+	<string>PSGroupCell</string>
+	<key>label</key>
+	<string>Author</string>
+	<key>footerText</key>
+	<string>My DM's are open, reach me if you need help or have any suggestions</string>
+</dict>
+<dict>
+	<key>cellClass</key>
+	<string>HBTwitterCell</string>
+	<key>label</key>
+	<string>That Chair Guy</string>
+	<key>user</key>
+	<string>DaThinkingChair</string>
+</dict>
+	</array>
+	<key>title</key>
+	<string>HideFleets</string>
+</dict>
+</plist>
