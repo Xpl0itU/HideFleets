@@ -22,32 +22,32 @@
 			<key>label</key>
 			<string>Hide Fleets</string>
 			<key>PostNotification</key>
-			<string>com.hidefleetsprefs/settingschanged</string>
+			<string>com.hidefleetsprefs/ReloadPrefs</string>
 		</dict>
 		<dict>
-		<key>cell</key>
-		<string>PSButtonCell</string>
-		<key>label</key>
-		<string>Apply</string>
-		<key>action</key>
-		<string>apply</string>
-</dict>
-<dict>
-	<key>cell</key>
-	<string>PSGroupCell</string>
-	<key>label</key>
-	<string>Author</string>
-	<key>footerText</key>
-	<string>My DM's are open, reach me if you need help or have any suggestions</string>
-</dict>
-<dict>
-	<key>cellClass</key>
-	<string>HBTwitterCell</string>
-	<key>label</key>
-	<string>That Chair Guy</string>
-	<key>user</key>
-	<string>DaThinkingChair</string>
-</dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Apply</string>
+			<key>action</key>
+			<string>apply</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Author</string>
+			<key>footerText</key>
+			<string>My DM's are open, reach me if you need help or have any suggestions</string>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>HBTwitterCell</string>
+			<key>label</key>
+			<string>That Chair Guy</string>
+			<key>user</key>
+			<string>DaThinkingChair</string>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>HideFleets</string>
