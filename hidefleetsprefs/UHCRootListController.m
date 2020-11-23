@@ -16,7 +16,7 @@
 			/*
 			 * Since you're using Cephei, might as well take advantage of the respring functions it has
 			 */
-			[HBRespringController respring]
+			[HBRespringController respring];
     }];
 
   	UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
