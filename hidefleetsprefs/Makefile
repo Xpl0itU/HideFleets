@@ -7,7 +7,7 @@ BUNDLE_NAME = HideFleetsPrefs
 HideFleetsPrefs_FILES = UHCRootListController.m
 HideFleetsPrefs_FRAMEWORKS = UIKit
 HideFleetsPrefs_PRIVATE_FRAMEWORKS = Preferences
-HideFleetsPrefs_EXTRA_FRAMEWORKS += CepheiPrefs Cephei
+HideFleetsPrefs_EXTRA_FRAMEWORKS += CepheiPrefs
 HideFleetsPrefs_INSTALL_PATH = /Library/PreferenceBundles
 HideFleetsPrefs_CFLAGS = -fobjc-arc
 

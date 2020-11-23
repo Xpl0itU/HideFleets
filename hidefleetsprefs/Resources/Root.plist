@@ -26,6 +26,20 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.hidefleetsprefs</string>
+			<key>key</key>
+			<string>NoPromoted</string>
+			<key>label</key>
+			<string>Hide Promoted Tweets</string>
+			<key>PostNotification</key>
+			<string>com.hidefleetsprefs/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
 			<string>Apply</string>
