@@ -1,33 +1,30 @@
 #import <Foundation/Foundation.h>
 #import <Cephei/HBPreferences.h>
 
-BOOL prefsEnabled;
-
-static void reloadPrefs() {
-  HBPreferences *file = [[HBPreferences alloc] initWithIdentifier:@"com.hidefleetsprefs"];
-
-  prefsEnabled = [[file objectForKey:@"HideFleets"] ?: @(YES) boolValue];
-
-}
-
-%group hide
-
 %hook T1FleetLineHeaderViewController
--(void)_t1_configureFleets {
-      return;
-}
+  -(void)_t1_configureFleets {
+    if(prefsEnabled) {
+     return;
+    }
 
--(void)_t1_updateFleetLineVisiblity {
-      return;
-}
-%end
+    %orig;
+  }
 
+  -(void)_t1_updateFleetLineVisiblity {
+    if(prefsEnabled) {
+      return;
+    }
+
+    %orig;
+  }
 %end
 
 %ctor {
-  reloadPrefs();
-  CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)reloadPrefs, CFSTR("com.hidefleetsprefs/settingschanged"), NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
-if(prefsEnabled) {
-        %init(hide);
-      }
+    /*
+     * Cephei automatically updates your preference variables as long as you set this up correctly
+     * You need to set the post notification in your Root.plist to "com.hidefleetprefs/ReloadPrefs" for this to work.
+     * You can learn more by reading Cephei's documentation: https://hbang.github.io/libcephei/
+     */
+  HBPreferences *preferences = [[HBPreferences alloc] initWithIdentifier:@"com.hidefleetsprefs"];
+  [preferences registerBool:&prefsEnabled default:YES forKey:@"HideFleets"];
 }
