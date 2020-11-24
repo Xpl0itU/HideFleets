@@ -1,6 +1,6 @@
 Package: com.hidefleets
 Name: HideFleets
-Version: 0.0.3
+Version: 0.0.31
 Architecture: iphoneos-arm
 Description: Hides Fleets and Promoted Tweets in the Twitter app.
 Maintainer: DaThinkingChair
